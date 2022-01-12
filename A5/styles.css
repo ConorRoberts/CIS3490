@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Roboto", sans-serif;
+}
+
+header {
+  padding: 2rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-weight: 300;
+}
+header h1 {
+  font-weight: 400;
+  font-size: 2.3rem;
+}
+header p {
+  font-size: 1.5rem;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 15vw;
+}
+section h2 {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 500;
+  margin: 0.8rem 0;
+}
+section h3 {
+  margin: 0.5rem 0;
+  text-align: center;
+  font-size: 2.3rem;
+  font-weight: 400;
+}
+section h4 {
+  margin: 0.5rem 0;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 300;
+}
+section p {
+  font-size: 1.5rem;
+}
+section ol li::marker {
+  font-size: 1.6rem;
+  font-weight: 300;
+}
+
+img {
+  width: 40rem;
+  margin-bottom: 1rem;
+}
+
+.swapped {
+  color: dodgerblue;
+}
+
+table td,
+table th {
+  font-size: 1.5rem;
+  font-weight: 300;
+  text-align: center;
+  padding: 0.5rem;
+}
+table th {
+  font-weight: 500;
+}
+
+.marriages {
+  margin-top: 45rem;
+}
+.marriages .legend {
+  margin: 1.3rem 0;
+  list-style-type: none;
+  display: flex;
+  gap: 1rem;
+}
+.marriages .legend li {
+  display: flex;
+  align-items: center;
+}
+.marriages .legend li div {
+  margin-left: 0.5rem;
+  height: 18px;
+  width: 18px;
+}
+.marriages .current {
+  border: 1px solid dodgerblue;
+}
+.marriages .married {
+  background: pink;
+}
+.marriages .freed {
+  background: #c3ffc3;
+}
+.marriages table tbody td:nth-child(1) {
+  font-weight: 500;
+}
+.marriages ol {
+  display: flex;
+  flex-wrap: wrap;
+}
+.marriages ol > * {
+  flex: 1 1 25%;
+}
+
+.venn-diagrams ol {
+  list-style-type: upper-alpha;
+}
+
+.bins {
+  display: flex;
+}
+.bins .bin {
+  margin: 0 3rem;
+  display: flex;
+  flex-direction: column-reverse;
+  height: 15rem;
+  width: 7rem;
+  border: 1px solid black;
+}
+.bins .bin div::before {
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+.bins .bin > * {
+  width: 100%;
+}
+.bins .bin-1 {
+  background: #b9b9ff;
+  height: 40%;
+}
+.bins .bin-1::before {
+  content: "s1";
+}
+.bins .bin-2 {
+  background: #daff76;
+  height: 70%;
+}
+.bins .bin-2::before {
+  content: "s2";
+}
+.bins .bin-3 {
+  background: #ff8a81;
+  height: 20%;
+}
+.bins .bin-3::before {
+  content: "s3";
+}
+.bins .bin-4 {
+  background: #fa5fff;
+  height: 10%;
+}
+.bins .bin-4::before {
+  content: "s4";
+}
+.bins .bin-5 {
+  background: #0046c7;
+  height: 50%;
+}
+.bins .bin-5::before {
+  content: "s5";
+}

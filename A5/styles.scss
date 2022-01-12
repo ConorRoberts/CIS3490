@@ -1,0 +1,182 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  font-family: "Roboto", sans-serif;
+}
+
+header {
+  padding: 2rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-weight: 300;
+  h1 {
+    font-weight: 400;
+    font-size: 2.3rem;
+  }
+  p {
+    font-size: 1.5rem;
+  }
+}
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 15vw;
+  $heading-margin: 0.5rem 0;
+  h2 {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 500;
+    margin: 0.8rem 0;
+  }
+  h3 {
+    margin: $heading-margin;
+    text-align: center;
+    font-size: 2.3rem;
+    font-weight: 400;
+  }
+  h4 {
+    margin: $heading-margin;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 300;
+  }
+  p {
+    font-size: 1.5rem;
+  }
+  ol li::marker {
+    font-size: 1.6rem;
+    font-weight: 300;
+  }
+}
+img {
+  width: 40rem;
+  margin-bottom: 1rem;
+}
+
+.swapped {
+  color: dodgerblue;
+}
+
+table {
+  td,
+  th {
+    font-size: 1.5rem;
+    font-weight: 300;
+    text-align: center;
+    padding: 0.5rem;
+  }
+  th {
+    font-weight: 500;
+  }
+}
+
+.marriages {
+  margin-top: 45rem;
+  .legend {
+    margin: 1.3rem 0;
+    list-style-type: none;
+    display: flex;
+    gap: 1rem;
+    li {
+      display: flex;
+      align-items: center;
+      div {
+        margin-left: 0.5rem;
+        $w: 18px;
+        height: $w;
+        width: $w;
+      }
+    }
+  }
+  .current {
+    border: 1px solid dodgerblue;
+  }
+  .married {
+    background: pink;
+  }
+  .freed {
+    background: rgb(195, 255, 195);
+  }
+  table {
+    tbody {
+      td:nth-child(1) {
+        font-weight: 500;
+      }
+    }
+  }
+  ol {
+    display: flex;
+    flex-wrap: wrap;
+    & > * {
+      flex: 1 1 25%;
+    }
+  }
+}
+
+.venn-diagrams {
+  ol {
+    list-style-type: upper-alpha;
+  }
+}
+
+.bins {
+    display:flex;
+    .bin {
+      margin:0 3rem;
+      display: flex;
+      flex-direction: column-reverse;
+      height: 15rem;
+      width: 7rem;
+      border: 1px solid black;
+      div::before{
+        font-size:1.5rem;
+        display:flex;
+        justify-content: center;
+      }
+      & > * {
+        width: 100%;
+      }
+      &-1{
+        background:rgb(185, 185, 255);
+        height:40%;
+        &::before{
+          content:"s1"
+        }
+      }
+      &-2{
+        background:rgb(218, 255, 118);
+        height:70%;
+        &::before{
+          content:"s2"
+        }
+      }
+      &-3{
+        background:rgb(255, 138, 129);
+        height:20%;
+        &::before{
+          content:"s3";
+        }
+      }
+      &-4{
+        background:rgb(250, 95, 255);
+        height:10%;
+        &::before{
+          content:"s4";
+        }
+      }
+      &-5{
+        background:rgb(0, 70, 199);
+        height:50%;
+        &::before{
+          content:"s5";
+        }
+      }
+    }
+}

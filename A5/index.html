@@ -1,0 +1,1214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>CIS3490 - A5</h1>
+        <p>Name: Conor Roberts (#1056167)</p>
+        <p>Date: April 4th, 2021</p>
+    </header>
+    <main>
+        <section>
+            <h2>Question 1.1</h2>
+            <img class="tree-image" src="./Tree.png">
+        </section>
+        <section>
+            <h2>Question 1.2</h2>
+            <p>Sort the array [23, 35, 42, 79, 18, 38] using heapsort</p>
+            <h3>Heap Construction</h3>
+            <p><span class="swapped">This colour</span> indicates two swapped elements</p>
+            <ol>
+                <li>
+                    <p>23, <span class="swapped">79</span>, 42, <span class="swapped">35</span>, 18, 38</p>
+                </li>
+                <li>
+                    <p><span class="swapped">79</span>, <span class="swapped">23</span>, 42, 35, 18, 38</p>
+                </li>
+                <li>
+                    <p>79, <span class="swapped">35</span>, 42, <span class="swapped">23</span>, 18, 38</p>
+                </li>
+            </ol>
+            <h4>Constructed heap 79, 35, 42, 23, 18, 38</h4>
+            <h3>Heap Sorting</h3>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>
+                            Initial
+                        </th>
+                        <th>
+                            Process
+                        </th>
+                        <th>
+                            Result
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            79, 35, 42, 23, 18, 38
+                        </td>
+                        <td>
+                            Max removal
+                        </td>
+                        <td>
+                            <span class="swapped">38</span>, 35, 42, 23, 18,
+                            <span class="swapped">79</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            38, 35, 42, 23, 18, 79
+                        </td>
+                        <td>
+                            Downheap
+                        </td>
+                        <td>
+                            <span class="swapped">42</span>, 35, <span class="swapped">38</span>, 23, 18, 79
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            42, 35, 38, 23, 18, 79
+                        </td>
+                        <td>
+                            Max removal
+                        </td>
+                        <td>
+                            <span class="swapped">18</span>, 35, 38, 23, <span class="swapped">42</span>, 79
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            18, 35, 38, 23, 42, 79
+                        </td>
+                        <td>
+                            Downheap
+                        </td>
+                        <td>
+                            <span class="swapped">38</span>, 35, <span class="swapped">18</span>, 23, 42, 79
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            38, 35, 18, 23, 42, 79
+                        </td>
+                        <td>
+                            Max removal
+                        </td>
+                        <td>
+                            <span class="swapped">23</span>, 35, 18, <span class="swapped">38</span>, 42, 79
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            23, 35, 18, 38, 42, 79
+                        </td>
+                        <td>
+                            Downheap
+                        </td>
+                        <td>
+                            <span class="swapped">35</span>, <span class="swapped">23</span>, 18, 38, 42, 79
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            35, 23, 18, 38, 42, 79
+                        </td>
+                        <td>
+                            Max removal
+                        </td>
+                        <td>
+                            <span class="swapped">18</span>, 23, <span class="swapped">35</span>, 38, 42, 79
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <h3>Sorted heap 18, 23, 35, 38, 42, 79</h3>
+        </section>
+        <section style="margin-top:40rem;">
+            <h2>Question 2.1</h2>
+            <img class="graphs-image" src="./Graphs.png">;
+        </section>
+        <section class="marriages" id="2.2">
+            <h2>Question 2.2</h2>
+            <div>
+                <h3>Legend</h3>
+                <ul class="legend">
+                    <li>
+                        <p>
+                            Current
+                        </p>
+                        <div class="current">
+                        </div>
+                    </li>
+                    <li>
+                        <p>
+                            Married
+                        </p>
+                        <div class="married">
+                        </div>
+                    </li>
+                    <li>
+                        <p>
+                            Freed
+                        </p>
+                        <div class="freed">
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <ol>
+                <li>
+                    <p>α proposes to A. A accepts unconditionally.</p>
+                    <table>
+                        <thead>
+                            <th>(x,y)</th>
+                            <th>A</th>
+                            <th>B</th>
+                            <th>C</th>
+                            <th>D</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    α
+                                </td>
+                                <td class="current">
+                                    1,3
+                                </td>
+                                <td>
+                                    2,3
+                                </td>
+                                <td>
+                                    3,2
+                                </td>
+                                <td>
+                                    4,3
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    β
+                                </td>
+                                <td>
+                                    1,4
+                                </td>
+                                <td>
+                                    4,1
+                                </td>
+                                <td>
+                                    3,4
+                                </td>
+                                <td>
+                                    2,2
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    γ
+                                </td>
+                                <td>
+                                    2,2
+                                </td>
+                                <td>
+                                    1,4
+                                </td>
+                                <td>
+                                    3,3
+                                </td>
+                                <td>
+                                    4,1
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    δ
+                                </td>
+                                <td>
+                                    4,1
+                                </td>
+                                <td>
+                                    2,2
+                                </td>
+                                <td>
+                                    3,1
+                                </td>
+                                <td>
+                                    1,4
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </li>
+                <li>
+                    <p> β proposes to A. A rejects.</p>
+                    <table>
+                        <thead>
+                            <th>(x,y)</th>
+                            <th>A</th>
+                            <th>B</th>
+                            <th>C</th>
+                            <th>D</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    α
+                                </td>
+                                <td class="current married">
+                                    1,3
+                                </td>
+                                <td>
+                                    2,3
+                                </td>
+                                <td>
+                                    3,2
+                                </td>
+                                <td>
+                                    4,3
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    β
+                                </td>
+                                <td class="current">
+                                    1,4
+                                </td>
+                                <td>
+                                    4,1
+                                </td>
+                                <td>
+                                    3,4
+                                </td>
+                                <td>
+                                    2,2
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    γ
+                                </td>
+                                <td>
+                                    2,2
+                                </td>
+                                <td>
+                                    1,4
+                                </td>
+                                <td>
+                                    3,3
+                                </td>
+                                <td>
+                                    4,1
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    δ
+                                </td>
+                                <td>
+                                    4,1
+                                </td>
+                                <td>
+                                    2,2
+                                </td>
+                                <td>
+                                    3,1
+                                </td>
+                                <td>
+                                    1,4
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </li>
+                <li>
+                    <p>
+                        β proposes to D. D accepts unconditionally.
+                    </p>
+                    <table>
+                        <thead>
+                            <th>(x,y)</th>
+                            <th>A</th>
+                            <th>B</th>
+                            <th>C</th>
+                            <th>D</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    α
+                                </td>
+                                <td class="married">
+                                    1,3
+                                </td>
+                                <td>
+                                    2,3
+                                </td>
+                                <td>
+                                    3,2
+                                </td>
+                                <td>
+                                    4,3
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    β
+                                </td>
+                                <td>
+                                    1,4
+                                </td>
+                                <td>
+                                    4,1
+                                </td>
+                                <td>
+                                    3,4
+                                </td>
+                                <td class="current">
+                                    2,2
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    γ
+                                </td>
+                                <td>
+                                    2,2
+                                </td>
+                                <td>
+                                    1,4
+                                </td>
+                                <td>
+                                    3,3
+                                </td>
+                                <td>
+                                    4,1
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    δ
+                                </td>
+                                <td>
+                                    4,1
+                                </td>
+                                <td>
+                                    2,2
+                                </td>
+                                <td>
+                                    3,1
+                                </td>
+                                <td>
+                                    1,4
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </li>
+                <li>
+                    <p>
+                        γ proposes to B. B accepts unconditionally.
+                    </p>
+                    <table>
+                        <thead>
+                            <th>(x,y)</th>
+                            <th>A</th>
+                            <th>B</th>
+                            <th>C</th>
+                            <th>D</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    α
+                                </td>
+                                <td class="married">
+                                    1,3
+                                </td>
+                                <td>
+                                    2,3
+                                </td>
+                                <td>
+                                    3,2
+                                </td>
+                                <td>
+                                    4,3
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    β
+                                </td>
+                                <td>
+                                    1,4
+                                </td>
+                                <td>
+                                    4,1
+                                </td>
+                                <td>
+                                    3,4
+                                </td>
+                                <td class="married">
+                                    2,2
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    γ
+                                </td>
+                                <td>
+                                    2,2
+                                </td>
+                                <td class="current">
+                                    1,4
+                                </td>
+                                <td>
+                                    3,3
+                                </td>
+                                <td>
+                                    4,1
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    δ
+                                </td>
+                                <td>
+                                    4,1
+                                </td>
+                                <td>
+                                    2,2
+                                </td>
+                                <td>
+                                    3,1
+                                </td>
+                                <td>
+                                    1,4
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </li>
+                <li>
+                    <p>
+                        δ proposes to D. D rejects.
+                    </p>
+                    <table>
+                        <thead>
+                            <th>(x,y)</th>
+                            <th>A</th>
+                            <th>B</th>
+                            <th>C</th>
+                            <th>D</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    α
+                                </td>
+                                <td class="married">
+                                    1,3
+                                </td>
+                                <td>
+                                    2,3
+                                </td>
+                                <td>
+                                    3,2
+                                </td>
+                                <td>
+                                    4,3
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    β
+                                </td>
+                                <td>
+                                    1,4
+                                </td>
+                                <td>
+                                    4,1
+                                </td>
+                                <td>
+                                    3,4
+                                </td>
+                                <td class="current married">
+                                    2,2
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    γ
+                                </td>
+                                <td>
+                                    2,2
+                                </td>
+                                <td class="married">
+                                    1,4
+                                </td>
+                                <td>
+                                    3,3
+                                </td>
+                                <td>
+                                    4,1
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    δ
+                                </td>
+                                <td>
+                                    4,1
+                                </td>
+                                <td>
+                                    2,2
+                                </td>
+                                <td>
+                                    3,1
+                                </td>
+                                <td class="current">
+                                    1,4
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </li>
+                <li>
+                    <p>
+                        δ proposes to B. B accepts and leaves γ free.
+                    </p>
+                    <table>
+                        <thead>
+                            <th>(x,y)</th>
+                            <th>A</th>
+                            <th>B</th>
+                            <th>C</th>
+                            <th>D</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    α
+                                </td>
+                                <td class="married">
+                                    1,3
+                                </td>
+                                <td>
+                                    2,3
+                                </td>
+                                <td>
+                                    3,2
+                                </td>
+                                <td>
+                                    4,3
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    β
+                                </td>
+                                <td>
+                                    1,4
+                                </td>
+                                <td>
+                                    4,1
+                                </td>
+                                <td>
+                                    3,4
+                                </td>
+                                <td class="married">
+                                    2,2
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    γ
+                                </td>
+                                <td>
+                                    2,2
+                                </td>
+                                <td class="current freed">
+                                    1,4
+                                </td>
+                                <td>
+                                    3,3
+                                </td>
+                                <td>
+                                    4,1
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    δ
+                                </td>
+                                <td>
+                                    4,1
+                                </td>
+                                <td class="current married">
+                                    2,2
+                                </td>
+                                <td>
+                                    3,1
+                                </td>
+                                <td>
+                                    1,4
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </li>
+                <li>
+                    <p>
+                        γ proposes to A. A accepts and leaves α free.
+                    </p>
+                    <table>
+                        <thead>
+                            <th>(x,y)</th>
+                            <th>A</th>
+                            <th>B</th>
+                            <th>C</th>
+                            <th>D</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    α
+                                </td>
+                                <td class="current freed">
+                                    1,3
+                                </td>
+                                <td>
+                                    2,3
+                                </td>
+                                <td>
+                                    3,2
+                                </td>
+                                <td>
+                                    4,3
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    β
+                                </td>
+                                <td>
+                                    1,4
+                                </td>
+                                <td>
+                                    4,1
+                                </td>
+                                <td>
+                                    3,4
+                                </td>
+                                <td class="married">
+                                    2,2
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    γ
+                                </td>
+                                <td class="current married">
+                                    2,2
+                                </td>
+                                <td>
+                                    1,4
+                                </td>
+                                <td>
+                                    3,3
+                                </td>
+                                <td>
+                                    4,1
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    δ
+                                </td>
+                                <td>
+                                    4,1
+                                </td>
+                                <td class="married">
+                                    2,2
+                                </td>
+                                <td>
+                                    3,1
+                                </td>
+                                <td>
+                                    1,4
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </li>
+                <li>
+                    <p>α proposes to B. B rejects.</p>
+                    <table>
+                        <thead>
+                            <th>(x,y)</th>
+                            <th>A</th>
+                            <th>B</th>
+                            <th>C</th>
+                            <th>D</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    α
+                                </td>
+                                <td>
+                                    1,3
+                                </td>
+                                <td class="current">
+                                    2,3
+                                </td>
+                                <td>
+                                    3,2
+                                </td>
+                                <td>
+                                    4,3
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    β
+                                </td>
+                                <td>
+                                    1,4
+                                </td>
+                                <td>
+                                    4,1
+                                </td>
+                                <td>
+                                    3,4
+                                </td>
+                                <td class="married">
+                                    2,2
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    γ
+                                </td>
+                                <td class="married">
+                                    2,2
+                                </td>
+                                <td>
+                                    1,4
+                                </td>
+                                <td>
+                                    3,3
+                                </td>
+                                <td>
+                                    4,1
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    δ
+                                </td>
+                                <td>
+                                    4,1
+                                </td>
+                                <td class="current married">
+                                    2,2
+                                </td>
+                                <td>
+                                    3,1
+                                </td>
+                                <td>
+                                    1,4
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </li>
+                <li>
+                    <p>α proposes to C. C accepts unconditionally.</p>
+                    <table>
+                        <thead>
+                            <th>(x,y)</th>
+                            <th>A</th>
+                            <th>B</th>
+                            <th>C</th>
+                            <th>D</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    α
+                                </td>
+                                <td>
+                                    1,3
+                                </td>
+                                <td>
+                                    2,3
+                                </td>
+                                <td class="current married">
+                                    3,2
+                                </td>
+                                <td>
+                                    4,3
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    β
+                                </td>
+                                <td>
+                                    1,4
+                                </td>
+                                <td>
+                                    4,1
+                                </td>
+                                <td>
+                                    3,4
+                                </td>
+                                <td class="married">
+                                    2,2
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    γ
+                                </td>
+                                <td class="married">
+                                    2,2
+                                </td>
+                                <td>
+                                    1,4
+                                </td>
+                                <td>
+                                    3,3
+                                </td>
+                                <td>
+                                    4,1
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    δ
+                                </td>
+                                <td>
+                                    4,1
+                                </td>
+                                <td class="married">
+                                    2,2
+                                </td>
+                                <td>
+                                    3,1
+                                </td>
+                                <td>
+                                    1,4
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </li>
+            </ol>
+            <h3>
+                Result: [{α, C}, {β, D}, {γ, A}, {δ ,B}]
+            </h3>
+        </section>
+        <section id="3.1">
+            <h2>Question 3.1</h2>
+            <ol>
+                <li>
+                    <p>C</p>
+                </li>
+                <li>
+                    <p>C</p>
+                </li>
+                <li>
+                    <p>B</p>
+                </li>
+                <li>
+                    <p>C</p>
+                </li>
+                <li>
+                    <p>C</p>
+                </li>
+            </ol>
+        </section>
+        <section id="3.2" class="venn-diagrams">
+            <h2>Question 3.2</h2>
+            <ol>
+                <li>
+                    <p>
+                        This is not possible because P!=NP and P!=NPC
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        This is not possible because there are NP problems that are neither P nor NPC
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        This is not possible because no problem is both P and NPC
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        This is possible because all P and NPC problems are withi NP and ther exist problems that are
+                        neither P nor NPC (as stated in B)
+                    </p>
+                </li>
+            </ol>
+        </section>
+        <section id="4.1">
+            <h2>Question 4.1</h2>
+            <img src="Circuit.png">
+        </section>
+        <section style="margin-top:60vh;" id="4.2">
+            <h2>Question 4.2</h2>
+            <p>Optimal Bound = ⌈[(2+5)+(2+3)+(5+1)+(3+1)]/2⌉ = 11</p>
+            <p>Lower Bound (lb) = 1 + 1 + 2 + 2 = 6</p>
+            <img style="width:70rem;" src="Salesman.png">
+        </section>
+        <section id="5.1">
+            <h2>Question 5.1</h2>
+            <p>Starting order [s<sub>2</sub>, s<sub>5</sub>,s<sub>1</sub>,s<sub>3</sub>,s<sub>4</sub>]</p>
+            <div class="bins">
+                <div class="bin">
+                    <div class="bin-2"></div>
+                    <div class="bin-3"></div>
+                    <div class="bin-4"></div>
+                </div>
+                <div class="bin">
+                    <div class="bin-5"></div>
+                    <div class="bin-1"></div>
+                </div>
+            </div>
+            <p>Optimal = ⌈ 1.9/1 ⌉ = 2</p>
+            <p>This solution is optimal because it does not exceed the number of bins in that of an optimal case.</p>
+        </section>
+        <section id="5.2" class="knapsack">
+            <h2>Question 5.2</h2>
+            <table class="initial">
+                <thead>
+                    <th>
+                        Item
+                    </th>
+                    <th>
+                        Weight
+                    </th>
+                    <th>
+                        Value
+                    </th>
+                    <th>
+                        Value/Weight
+                    </th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            1
+                        </td>
+                        <td>
+                            7
+                        </td>
+                        <td>
+                            $42
+                        </td>
+                        <td>
+                            6
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            2
+                        </td>
+                        <td>
+                            3
+                        </td>
+                        <td>
+                            $12
+                        </td>
+                        <td>
+                            4
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            3
+                        </td>
+                        <td>
+                            4
+                        </td>
+                        <td>
+                            $40
+                        </td>
+                        <td>
+                            10
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            4
+                        </td>
+                        <td>
+                            5
+                        </td>
+                        <td>
+                            $25
+                        </td>
+                        <td>
+                            5
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <h3>Sorted Ratios</h3>
+            <p>10 (3), 6 (1), 5 (4), 4 (2)</p>
+            <h3>Subsets (k=2)</h3>
+            <p>∅, {1}, {2}, {3}, {1,2}, {1,3}, {1,4}, {2,3}, {2,4}, {3,4}</p>
+            <table>
+                <thead>
+                    <th>Subset</th>
+                    <th>Added Items</th>
+                    <th>Value</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            ∅
+                        </td>
+                        <td>
+                            3,1
+                        </td>
+                        <td>
+                            $82
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            {1}
+                        </td>
+                        <td>
+                            3
+                        </td>
+                        <td>
+                            $82
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            {2}
+                        </td>
+                        <td>
+                            3
+                        </td>
+                        <td>
+                            $52
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            {3}
+                        </td>
+                        <td>
+                            1
+                        </td>
+                        <td>
+                            $82
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            {4}
+                        </td>
+                        <td>
+                            3
+                        </td>
+                        <td>
+                            $65
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            {1,2}
+                        </td>
+                        <td>
+                            
+                        </td>
+                        <td>
+                            $54
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            {1,3}
+                        </td>
+                        <td>
+                            
+                        </td>
+                        <td>
+                            $82
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            {1,4}
+                        </td>
+                        <td>
+                            Impossible
+                        </td>
+                        <td>
+                            
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            {2,3}
+                        </td>
+                        <td>
+                            
+                        </td>
+                        <td>
+                            $52
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            {2,4}
+                        </td>
+                        <td>
+                            
+                        </td>
+                        <td>
+                            $37
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            {3,4}
+                        </td>
+                        <td>
+                            2
+                        </td>
+                        <td>
+                            $65
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <h3>Optimal Knapsack</h3>
+            <p>{1,3}, weight: 11, value: $82</p>
+        </section>
+    </main>
+</body>
+
+</html>
